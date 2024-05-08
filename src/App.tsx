@@ -1,13 +1,13 @@
 
 import './App.css'
-import ButtonExp from './ButtonExp'
+import Navigation from './Components/Navigation/Navigation'
 
 function App() {
 
   return (
    <>
 
-<ButtonExp />
+<Navigation />
    </>
   )
 }
