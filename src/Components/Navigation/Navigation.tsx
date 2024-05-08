@@ -2,6 +2,7 @@
 import { useState } from'react' 
 import './Navigation.scss'
 
+
 const Navigation = () => {
 
     const [isActive, setIsActive] = useState(false);
