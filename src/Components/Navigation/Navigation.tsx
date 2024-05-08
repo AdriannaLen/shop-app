@@ -7,16 +7,14 @@ const Navigation = () => {
 
         <>
         <div className="navigation">
-        <ul className="navigation__list">
-            <li className="navigation__list__item">Main</li>
-            <li className="navigation__list__item">Shop</li>
-            <li className="navigation__list__item">Cart</li>
-            <li className="navigation__list__item">Favorites</li>
-            
-        </ul>
-         
+            <ul className="navigation__list">
+                <li className="navigation__list__item"><a href="#">Main</a></li>
+                <li className="navigation__list__item"><a href="#">Shop</a></li>
+                <li className="navigation__list__item"><a href="#">Cart</a></li>
+                <li className="navigation__list__item"><a href="#">Favorites</a></li>
+            </ul>
         </div>
-        </>
+    </>
         
         
     )

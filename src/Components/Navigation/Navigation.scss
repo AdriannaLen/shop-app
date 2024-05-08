@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
 .navigation {
 
@@ -6,12 +6,18 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
+    font-family: "Urbanist", sans-serif;
 
     .navigation__list__item {
 
-        text-decoration: none;
         list-style: none;
+      
+
+         a {
+
+            text-decoration: none;
+        }
     }
 }
 }
