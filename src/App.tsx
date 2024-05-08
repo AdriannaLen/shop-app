@@ -1,13 +1,23 @@
 
 import './App.css'
-import Navigation from './Components/Navigation/Navigation'
+import { BrowserRouter, Routes, Route } from 'react-router-dom' 
+import Cart from './pages/Cart' 
+import Favorites from './pages/Favorites'
+import Main from './pages/Main'
+import Shop from './pages/Shop'
 
 function App() {
 
   return (
    <>
-
-<Navigation />
+<BrowserRouter>
+<Routes>
+  <Route index element={<Main />} />
+  <Route path="/shop" element={< Shop />} />
+  <Route path="/cart" element={< Cart />} />
+  <Route path="/favorites" element={< Favorites />} /> 
+</Routes>
+</BrowserRouter>
    </>
   )
 }

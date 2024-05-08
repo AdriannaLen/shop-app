@@ -8,10 +8,10 @@ const Navigation = () => {
         <>
         <div className="navigation">
             <ul className="navigation__list">
-                <li className="navigation__list__item"><a href="#">Main</a></li>
-                <li className="navigation__list__item"><a href="#">Shop</a></li>
-                <li className="navigation__list__item"><a href="#">Cart</a></li>
-                <li className="navigation__list__item"><a href="#">Favorites</a></li>
+                <li className="navigation__list__item"><a href="/main">Main</a></li>
+                <li className="navigation__list__item"><a href="/shop">Shop</a></li>
+                <li className="navigation__list__item"><a href="/cart">Cart</a></li>
+                <li className="navigation__list__item"><a href="/favorites">Favorites</a></li>
             </ul>
         </div>
     </>
