@@ -1,4 +1,6 @@
 
+import './Navigation.scss'
+
 const Navigation = () => {
 
     return (
@@ -10,8 +12,9 @@ const Navigation = () => {
             <li className="navigation__list__item">Shop</li>
             <li className="navigation__list__item">Cart</li>
             <li className="navigation__list__item">Favorites</li>
+            
         </ul>
-        <span>Dark mode</span>    
+         
         </div>
         </>
         
