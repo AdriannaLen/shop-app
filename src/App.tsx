@@ -1,7 +1,6 @@
 
 import './App.css'
 import ButtonExp from './ButtonExp'
-import FetchData from './FetchData'
 
 function App() {
 
@@ -9,7 +8,6 @@ function App() {
     <>
 
       <ButtonExp />
-      <FetchData />
     </>
   )
 }
