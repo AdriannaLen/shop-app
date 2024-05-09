@@ -1,5 +1,7 @@
 
 // import { useState } from'react' 
+import shoppingCartIcon from '../../assets/shopping_cart_icon.png';
+import heartIcon from '../../assets/heart_icon.png';
 import './Navigation.scss'
 
 
@@ -27,8 +29,8 @@ const Navigation = () => {
             <ul className="navigation__list">
                 <li className="navigation__item"><a href="/main">Main</a></li>
                 <li className="navigation__item"><a href="/shop">Shop</a></li>
-                <li className="navigation__item"><a href="/cart"><img src="../../assets/shopping_cart_icon.png." /></a></li>
-                <li className="navigation__item"><a href="/favorites"><img src="../../assets/heart_icon.png" /></a></li>
+                <li className="navigation__item"><a href="/cart"><img src={shoppingCartIcon}/></a></li>
+                <li className="navigation__item"><a href="/favorites"><img src={heartIcon} /></a></li>
             </ul>
 
             <div className="logo">
