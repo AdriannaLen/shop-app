@@ -14,13 +14,18 @@
 
         list-style: none;
 
-        .sub-menu {
+        .sub__menu {
             display: none; /* Ukryj podlistę domyślnie */
             position: absolute;
             background-color: #fff; /* Dla przejrzystości */
-            padding: 10px;
+            padding: 20px;
             z-index: 1;
 
+            li {
+
+                margin: 10px;
+            
+            }
         }
 
          a {
@@ -37,13 +42,16 @@
 
     }
 
-    .navigation__item:hover .sub-menu {
+    .navigation__item:hover .sub__menu {
     
         display: block;
         border-radius: 20px;
         list-style: none;
    
     }
+
+  
+   
 
 }
 
