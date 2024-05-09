@@ -1,0 +1,12 @@
+.card {
+  width: 18rem;
+}
+.product-list-item {
+  list-style-type: none;
+}
+.product-list-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  flex-wrap: wrap;
+}
