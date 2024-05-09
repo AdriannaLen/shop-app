@@ -1,8 +1,11 @@
+import Navigation from "../Components/Navigation/Navigation";
+import Footer from "../Components/Footer/Footer";
 
 const Favorites = () => {
     return (
         <>
-            <h1>Favorites</h1>
+             <Navigation />
+            <Footer />
         </>
     )
 }
