@@ -14,6 +14,15 @@
 
         list-style: none;
 
+        .sub-menu {
+            display: none; /* Ukryj podlistę domyślnie */
+            position: absolute;
+            background-color: #fff; /* Dla przejrzystości */
+            padding: 10px;
+            z-index: 1;
+
+        }
+
          a {
 
             text-decoration: none;
@@ -28,9 +37,18 @@
 
     }
 
+    .navigation__item:hover .sub-menu {
     
+        display: block;
+        border-radius: 20px;
+        list-style: none;
+   
+    }
 
 }
+
+
+
 }
 
 .navigation {

@@ -28,7 +28,12 @@ const Navigation = () => {
             
             <ul className="navigation__list">
                 <li className="navigation__item"><a href="/main">Main</a></li>
-                <li className="navigation__item"><a href="/shop">Shop</a></li>
+                <li className="navigation__item"><a href="/shop">Shop</a>
+                <ul className="sub-menu">
+                <li><a href="/shop/category1">New in</a></li>
+                <li><a href="/shop/category2">All Products</a></li>
+            {/* Dodaj więcej elementów podlisty według potrzeb */}
+                 </ul></li>
                 <li className="navigation__item"><a href="/cart"><img src={shoppingCartIcon}/></a></li>
                 <li className="navigation__item"><a href="/favorites"><img src={heartIcon} /></a></li>
             </ul>
