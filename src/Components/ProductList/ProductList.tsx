@@ -1,41 +1,22 @@
-import './ProductList.scss'
-const ProductList = () => {
+import React from 'react';
+import ProductCard from '../ProductCard/ProductCard';
+import { Product } from '../types';
+
+interface ProductListProps {
+  products: Product[];
+}
+
+const ProductList: React.FC<ProductListProps> = ({ products }) => {
   return (
     <>
       <h1>Product List</h1>
       <ul className='product-list-container'>
-        <li className='product-list-item'>
-          <div className="card">
-            <img className="card-img-top" src="https://cdn.dummyjson.com/product-images/12/1.jpg" alt="Card image cap" />
-            <div className="card-body">
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <button className="btn btn-primary">Add to Cart</button>
-            </div>
-          </div>
-        </li>
-        <li className='product-list-item'>
-          <div className="card">
-            <img className="card-img-top" src="https://cdn.dummyjson.com/product-images/12/1.jpg" alt="Card image cap" />
-            <div className="card-body">
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <button className="btn btn-primary">Add to Cart</button>
-            </div>
-          </div>
-        </li>
-        <li className='product-list-item'>
-          <div className="card">
-            <img className="card-img-top" src="https://cdn.dummyjson.com/product-images/12/1.jpg" alt="Card image cap" />
-            <div className="card-body">
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <button className="btn btn-primary">Add to Cart</button>
-            </div>
-          </div>
-        </li>
+        {products && products.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
       </ul>
     </>
-  )
-}
-export default ProductList
+  );
+};
+
+export default ProductList;
