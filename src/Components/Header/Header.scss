@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+
+    .logo {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        background-color: rgb(59, 58, 58);
+    
+        .logo__header {
+            
+            font-family: "Urbanist", sans-serif;
+            color: white;
+            font-size: 60px;
+        }
+    }

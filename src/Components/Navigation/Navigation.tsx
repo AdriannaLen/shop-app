@@ -37,14 +37,6 @@ const Navigation = () => {
                 <li className="navigation__item"><a href="/cart"><img src={shoppingCartIcon}/></a></li>
                 <li className="navigation__item"><a href="/favorites"><img src={heartIcon} /></a></li>
             </ul>
-
-            <div className="logo">
-
-                <p className="logo__header">
-                    Shop in style
-                </p>
-
-            </div>
     
         </nav>
     </>
