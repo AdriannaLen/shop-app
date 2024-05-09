@@ -27,8 +27,8 @@ const Navigation = () => {
             <ul className="navigation__list">
                 <li className="navigation__item"><a href="/main">Main</a></li>
                 <li className="navigation__item"><a href="/shop">Shop</a></li>
-                <li className="navigation__item"><a href="/cart">Cart</a></li>
-                <li className="navigation__item"><a href="/favorites">Favorites</a></li>
+                <li className="navigation__item"><a href="/cart"><img src="../../assets/shopping_cart_icon.png." /></a></li>
+                <li className="navigation__item"><a href="/favorites"><img src="../../assets/heart_icon.png" /></a></li>
             </ul>
 
             <div className="logo">
