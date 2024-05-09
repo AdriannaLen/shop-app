@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+.navigation {
+
+    .navigation__list {
+    // display: flex;
+    // justify-content: flex-end;
+    // align-items: center;
+    // gap: 30px;
+    font-family: "Urbanist", sans-serif;
+
+    .navigation__item {
+
+        list-style: none;
+
+         a {
+
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
+}
+
+
+.site__nav {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.hamburger {
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+}
+
+.hamburger, .navigation {
+    transition: transform .3s .1s ease-in-out;
+}
+
+.hamburger--active {
+    transform: translateX(250px);
+}
+
+.hamburger__box {
+    width: 35px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+}
+
+.hamburger__inner {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color .1s .3s ease-in-out;
+}
+
+.hamburger__inner::before,
+.hamburger__inner::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    transition: transform .1s .3s ease-in-out;
+}
+
+.hamburger__inner::before {
+    top: -10px;
+}
+
+.hamburger__inner::after {
+    top: 10px;
+}
+
+.hamburger--active .hamburger__inner {
+    background-color: transparent;
+}
+
+.hamburger--active .hamburger__inner::before {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger--active .hamburger__inner::after {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+.navigation {
+    height: 100vh;
+    width: 250px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-250px);
+}
+
+.navigation--active {
+    transform: translateX(0px);
+}
+
+.navigation__list {
+    margin-top: 50px;
+    list-style: none;
+}
+
+.navigation__item {
+    margin-bottom: 20px;
+}
+
