@@ -27,7 +27,7 @@ const Navigation = () => {
         <nav className="navigation">
             
             <ul className="navigation__list">
-                <li className="navigation__item"><a href="/main">Main</a></li>
+                <li className="navigation__item"><a href="/">Main</a></li>
                 <li className="navigation__item"><a href="/shop">Shop</a>
                 <ul className="sub__menu">
                 <li><a href="/shop/category1">New in</a></li>
