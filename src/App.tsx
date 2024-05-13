@@ -5,14 +5,13 @@ import Favorites from './pages/Favorites'
 import Main from './pages/Main'
 import Shop from './pages/Shop'
 import 'bootstrap/dist/css/bootstrap.css';
-import Footer from './Components/Footer/Footer'
-import Navigation from './Components/Navigation/Navigation'
+
 
 function App() {
 
   return (
     <>
-    <Navigation />
+  
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Main />} />
@@ -21,7 +20,7 @@ function App() {
           <Route path="/favorites" element={< Favorites />} />
         </Routes>
       </BrowserRouter>
-      <Footer />
+   
     </>
   )
 }

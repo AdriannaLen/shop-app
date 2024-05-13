@@ -2,13 +2,13 @@
 
 
 .footer {
-
+   
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
     background-color: rgb(59, 58, 58);
-    position:absolute;
+    position:fixed;
     width: 100vw;
     bottom: 0;
 
