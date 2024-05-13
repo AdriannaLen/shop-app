@@ -28,7 +28,8 @@ const ProductList: React.FC<ProductListProps> = () => {
     fetchProducts();
   }, []);
   return (
-    <>
+   
+    <div className="container">
       <h1 className="header">Product List</h1>
       <ul className='product-list-container'>
         {products.map((product) => (
@@ -37,7 +38,8 @@ const ProductList: React.FC<ProductListProps> = () => {
           </li>
         ))}
       </ul>
-    </>
+      </div>
+    
   );
 };
 
