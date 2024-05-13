@@ -2,13 +2,12 @@
 
 
 .footer {
-   
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
     background-color: rgb(59, 58, 58);
-    width: 100vw;
+    width:100%;
     bottom: 0;
 
     .footer__content {

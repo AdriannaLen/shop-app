@@ -1,6 +1,7 @@
 import Footer from "../Components/Footer/Footer";
 import Header from "../Components/Header/Header"; 
 import Navigation from "../Components/Navigation/Navigation";
+import MainSection from "../Components/MainSection/MainSection";
 
 
 const Main =() => {
@@ -8,6 +9,7 @@ const Main =() => {
     <>
       <Navigation />
       <Header />
+      <MainSection />
       <Footer />
     
     </>
