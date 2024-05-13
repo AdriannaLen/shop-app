@@ -1,41 +1,43 @@
+import React from 'react';
+import ProductCard from '../ProductCard/ProductCard';
+import { useState, useEffect } from "react";
+import { Product } from '../types';
 import './ProductList.scss'
-const ProductList = () => {
+
+interface ProductListProps {
+  products: Product[];
+}
+
+const ProductList: React.FC<ProductListProps> = () => {
+  const [products, setProducts] = useState<Product[]>([]);
+
+  const fetchProducts = async () => {
+    try {
+      const response = await fetch("https://shop-react-c0b01-default-rtdb.firebaseio.com/products/-NxNDxEEA4HYwG6BEhG0/products.json");
+      if (!response.ok) throw new Error("Something goes wrong!");
+
+      const products = await response.json();
+      setProducts(products);
+    } catch (error) {
+      console.error("Error fetching users:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
   return (
     <>
       <h1>Product List</h1>
       <ul className='product-list-container'>
-        <li className='product-list-item'>
-          <div className="card">
-            <img className="card-img-top" src="https://cdn.dummyjson.com/product-images/12/1.jpg" alt="Card image cap" />
-            <div className="card-body">
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <button className="btn btn-primary">Add to Cart</button>
-            </div>
-          </div>
-        </li>
-        <li className='product-list-item'>
-          <div className="card">
-            <img className="card-img-top" src="https://cdn.dummyjson.com/product-images/12/1.jpg" alt="Card image cap" />
-            <div className="card-body">
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <button className="btn btn-primary">Add to Cart</button>
-            </div>
-          </div>
-        </li>
-        <li className='product-list-item'>
-          <div className="card">
-            <img className="card-img-top" src="https://cdn.dummyjson.com/product-images/12/1.jpg" alt="Card image cap" />
-            <div className="card-body">
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <button className="btn btn-primary">Add to Cart</button>
-            </div>
-          </div>
-        </li>
+        {products.map((product) => (
+          <li className='product-list-item' key={product.id}>
+            <ProductCard key={product.id} product={product} />
+          </li>
+        ))}
       </ul>
     </>
-  )
-}
-export default ProductList
+  );
+};
+
+export default ProductList;
