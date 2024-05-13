@@ -6,10 +6,12 @@ import Main from './pages/Main'
 import Shop from './pages/Shop'
 import 'bootstrap/dist/css/bootstrap.css';
 
+
 function App() {
 
   return (
     <>
+  
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Main />} />
@@ -18,6 +20,7 @@ function App() {
           <Route path="/favorites" element={< Favorites />} />
         </Routes>
       </BrowserRouter>
+   
     </>
   )
 }

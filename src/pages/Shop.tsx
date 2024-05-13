@@ -1,15 +1,17 @@
 import ProductList from "../Components/ProductList/ProductList";
 import Navigation from "../Components/Navigation/Navigation";
-import Footer from "../Components/Footer/Footer";
+import Footer from "../Components/Footer/Footer";   
+import Header from "../Components/Header/Header";
+
 
 const Shop = () => {
     return (
         <>
         <Navigation />
-    
-            <h1>Shop</h1>
+        <Header> Products </Header>
             <ProductList />
             <Footer />
+           
         </>
     )
 }

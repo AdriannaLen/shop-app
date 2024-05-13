@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Product } from '../types';
 import './ProductList.scss'
 
+
 interface ProductListProps {
   products: Product[];
 }
@@ -27,8 +28,8 @@ const ProductList: React.FC<ProductListProps> = () => {
     fetchProducts();
   }, []);
   return (
-    <>
-      <h1>Product List</h1>
+   
+    <div className="container">
       <ul className='product-list-container'>
         {products.map((product) => (
           <li className='product-list-item' key={product.id}>
@@ -36,7 +37,8 @@ const ProductList: React.FC<ProductListProps> = () => {
           </li>
         ))}
       </ul>
-    </>
+      </div>
+    
   );
 };
 

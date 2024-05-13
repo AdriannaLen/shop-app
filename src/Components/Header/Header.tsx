@@ -1,7 +1,7 @@
 
 import './Header.scss';
 
-const Header = () => {
+const Header = ({children }: any) => {
 
     return (
         <>
@@ -9,7 +9,7 @@ const Header = () => {
 <div className="logo">
 
 <p className="logo__header">
-    Shop in style
+    {children}
 </p>
 
 </div>

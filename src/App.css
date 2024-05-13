@@ -1,0 +1,10 @@
+html, body {
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+.header {
+
+    margin: 70px auto;
+}

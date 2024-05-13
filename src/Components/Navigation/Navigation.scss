@@ -2,7 +2,15 @@
 
 .navigation {
 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff00;
+    z-index: 1000; 
+   
     .navigation__list {
+   
     display: flex;
     justify-content: flex-end;
     align-items: center;

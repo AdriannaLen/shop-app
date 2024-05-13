@@ -1,9 +1,25 @@
+
+.container {
+
+  min-height: 100%;
+}
 .product-list-item {
   list-style-type: none;
 }
 .product-list-container {
+  
   display: flex;
   justify-content: space-around;
   gap: 10px;
   flex-wrap: wrap;
+  
+}
+
+.header {
+
+  margin: 60px 0;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 20px;
 }
