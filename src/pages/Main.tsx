@@ -8,7 +8,7 @@ const Main =() => {
   return (
     <>
       <Navigation />
-      <Header />
+      <Header> Shop in Style </Header>
       <MainSection />
       <Footer />
     

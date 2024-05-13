@@ -30,7 +30,6 @@ const ProductList: React.FC<ProductListProps> = () => {
   return (
    
     <div className="container">
-      <h1 className="header">Product List</h1>
       <ul className='product-list-container'>
         {products.map((product) => (
           <li className='product-list-item' key={product.id}>
