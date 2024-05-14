@@ -1,24 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
+.logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: rgb(59, 58, 58);
+  margin: 100px 0;
 
-
-
-    .logo {
-      
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 200px;
-        background-color: rgb(59, 58, 58);
-        margin: 100px 0;
-    
-        .logo__header {
-            
-            font-family: "Urbanist", sans-serif;
-            color: white;
-            font-size: 40px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-        }
-    }
+  .logo__header {
+    font-family: 'Urbanist', sans-serif;
+    color: white;
+    font-size: 40px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+}
