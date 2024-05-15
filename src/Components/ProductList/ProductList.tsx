@@ -1,18 +1,20 @@
 import React from 'react';
 import ProductCard from '../ProductCard/ProductCard';
 import Loader from '../Loader/Loader';
+import ShoppingCart from '../ShoppingCart/ShoppingCart';
 import { useState, useEffect } from "react";
 import { Product } from '../types';
-import './ProductList.scss'
-
+import './ProductList.scss';
 
 interface ProductListProps {
   products: Product[];
+  addToCart: (product: Product) => void;
 }
 
 const ProductList: React.FC<ProductListProps> = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [ isLoading, setIsLoading ] = useState(false);
+  const [ cartItems, setCartItems ] = useState<Product[]>([]);
 
   const fetchProducts = async () => {
     try {
@@ -41,6 +43,11 @@ const ProductList: React.FC<ProductListProps> = () => {
   })
 
 
+  const addToCart = (product: Product) => {
+
+    setCartItems([...cartItems, products]);
+  }
+
   return (
    
     <div className="container">
@@ -48,10 +55,11 @@ const ProductList: React.FC<ProductListProps> = () => {
       <ul className='product-list-container'>
         {products.map((product) => (
           <li className='product-list-item' key={product.id}>
-            <ProductCard key={product.id} product={product} />
+            <ProductCard key={product.id} product={product} addToCart={addToCart} />
           </li>
         ))}
       </ul> }
+      <ShoppingCart cartItems={cartItems} />
       </div>
     
   );

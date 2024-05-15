@@ -4,9 +4,10 @@ import "./ProductCard.scss"
 
 interface ProductCardProps {
   product: Product;
+  addToCart: (product: Product) => void;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ product, addToCart }) => {
   return (
     <div className="card">
       <img className="card-img-top" src={product.thumbnail} alt={product.title} />
@@ -15,7 +16,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <p className="card-text">{product.description}</p>
         <div className='card-summary'>
           <p className="card-text">Price: ${product.price}</p>
-          <button className="btn btn-primary">Add to Cart</button>
+          <button className="btn btn-primary" onClick={() => addToCart(product)}>Add to Cart</button>
         </div>
       </div>
     </div>
