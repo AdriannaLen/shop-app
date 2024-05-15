@@ -11,6 +11,7 @@ interface ProductListProps {
 
 const ProductList: React.FC<ProductListProps> = () => {
   const [products, setProducts] = useState<Product[]>([]);
+  const [ isLoading, setIsLoading ] = useState(false);
 
   const fetchProducts = async () => {
     try {
