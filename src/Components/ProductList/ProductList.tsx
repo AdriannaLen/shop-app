@@ -1,7 +1,6 @@
 import React from 'react';
 import ProductCard from '../ProductCard/ProductCard';
 import Loader from '../Loader/Loader';
-import ShoppingCart from '../ShoppingCart/ShoppingCart';
 import { useState, useEffect } from "react";
 import { Product } from '../types';
 import './ProductList.scss';
@@ -59,7 +58,7 @@ const ProductList: React.FC<ProductListProps> = () => {
           </li>
         ))}
       </ul> }
-      <ShoppingCart cartItems={cartItems} />
+    
       </div>
     
   );
