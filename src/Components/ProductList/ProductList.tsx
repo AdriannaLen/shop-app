@@ -34,6 +34,13 @@ const ProductList: React.FC<ProductListProps> = () => {
   useEffect(() => {
     fetchProducts();
   }, []);
+
+  useEffect(() => {
+
+    setTimeout(() => setIsLoading(false), 3000); // for the Loader component
+  })
+
+
   return (
    
     <div className="container">

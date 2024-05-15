@@ -1,10 +1,13 @@
 
+import './Loader.scss'
 
 const Loader = () => {
 
     return (
 
-    <p>Loading...</p>
+        <div className="loader-container">
+        <div className="loader"></div>
+      </div>
     )
 }
 
