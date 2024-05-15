@@ -43,8 +43,8 @@ const ProductList: React.FC<ProductListProps> = () => {
 
 
   const addToCart = (product: Product) => {
-
-    setCartItems([...cartItems, products]);
+    const updatedCartItems = [...cartItems, product];
+    setCartItems(updatedCartItems);
   }
 
   return (
