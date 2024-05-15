@@ -41,11 +41,19 @@ const ProductList: React.FC<ProductListProps> = () => {
     setTimeout(() => setIsLoading(false), 3000); // for the Loader component
   })
 
-
+  useEffect(() => {
+    fetchProducts();
+    const savedCartItems = localStorage.getItem('cartItems');
+    if (savedCartItems) {
+      setCartItems(JSON.parse(savedCartItems));
+    }
+  }, []);
+  
   const addToCart = (product: Product) => {
     const updatedCartItems = [...cartItems, product];
     setCartItems(updatedCartItems);
-  }
+    localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
+  };
 
   return (
    
@@ -58,7 +66,6 @@ const ProductList: React.FC<ProductListProps> = () => {
           </li>
         ))}
       </ul> }
-    
       </div>
     
   );
