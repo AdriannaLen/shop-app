@@ -2,14 +2,14 @@
 .loader-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    // align-items: center;
     height: 100vh; // Full viewport height
     background-color: #f3f3f3; // Background color for the container
   }
   
   .loader {
     border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #3498db; /* Blue */
+    border-top: 16px solid #4c4e4f; /* Blue */
     border-radius: 50%;
     width: 120px;
     height: 120px;
