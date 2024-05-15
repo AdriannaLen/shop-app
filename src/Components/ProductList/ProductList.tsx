@@ -1,5 +1,6 @@
 import React from 'react';
 import ProductCard from '../ProductCard/ProductCard';
+import Loader from '../Loader/Loader';
 import { useState, useEffect } from "react";
 import { Product } from '../types';
 import './ProductList.scss'
@@ -24,6 +25,10 @@ const ProductList: React.FC<ProductListProps> = () => {
     } catch (error) {
       console.error("Error fetching users:", error);
     }
+
+    finally {
+      setIsLoading(false);
+    }
   };
 
   useEffect(() => {
@@ -32,7 +37,7 @@ const ProductList: React.FC<ProductListProps> = () => {
   return (
    
     <div className="container">
-      { isLoading &&
+      { isLoading ? <Loader /> :
       <ul className='product-list-container'>
         {products.map((product) => (
           <li className='product-list-item' key={product.id}>
