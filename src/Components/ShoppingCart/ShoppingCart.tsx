@@ -11,7 +11,6 @@ interface ShoppingCartProps {
     
 
         <div className="container">
-        <h2>Shopping Cart</h2>
         <ul>
           {cartItems.map((item, index) => (
             <>
