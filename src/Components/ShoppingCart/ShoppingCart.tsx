@@ -16,6 +16,7 @@ interface ShoppingCartProps {
             <>
             <li className="buttonList" key={index}>{item.title} - ${item.price}
             <button className="buttonList__delete" onClick={() => handleDelete(item.id)}>Delete</button>
+            
             </li>
             </>
           ))}
