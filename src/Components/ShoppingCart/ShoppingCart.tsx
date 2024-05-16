@@ -1,5 +1,5 @@
 import { Product } from '../types';
-
+import './ShoppingCart.scss'
 
 interface ShoppingCartProps {
     cartItems: Product[];
@@ -11,12 +11,11 @@ interface ShoppingCartProps {
     
 
         <div className="container">
-        <h2>Shopping Cart</h2>
         <ul>
           {cartItems.map((item, index) => (
             <>
-            <li key={index}>{item.title} - ${item.price}
-            <button className="delete-button" onClick={() => handleDelete(item.id)}>Delete</button>
+            <li className="buttonList" key={index}>{item.title} - ${item.price}
+            <button className="buttonList__delete" onClick={() => handleDelete(item.id)}>Delete</button>
             </li>
             </>
           ))}
