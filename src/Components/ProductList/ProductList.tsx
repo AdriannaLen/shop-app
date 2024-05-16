@@ -1,6 +1,7 @@
 import React from 'react';
 import ProductCard from '../ProductCard/ProductCard';
 import Loader from '../Loader/Loader';
+import PopUp from '../PopUp/PopUp';
 import { useState, useEffect } from "react";
 import { Product } from '../types';
 import './ProductList.scss';
@@ -14,6 +15,7 @@ const ProductList: React.FC<ProductListProps> = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [ isLoading, setIsLoading ] = useState(false);
   const [ cartItems, setCartItems ] = useState<Product[]>([]);
+  const [ visible, setVisible ] = useState(false);
 
   const fetchProducts = async () => {
     try {
@@ -53,6 +55,13 @@ const ProductList: React.FC<ProductListProps> = () => {
     const updatedCartItems = [...cartItems, product];
     setCartItems(updatedCartItems);
     localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
+    setVisible(true);
+    const timer = setTimeout(() => {
+      setVisible(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+
   };
 
   return (
@@ -66,6 +75,7 @@ const ProductList: React.FC<ProductListProps> = () => {
           </li>
         ))}
       </ul> }
+      <PopUp visible={visible} />
       </div>
     
   );
