@@ -84,7 +84,7 @@ const ProductList: React.FC<ProductListProps> = () => {
               </li>
             ))}
           </ul>
-          <ShoppingCart cartItems={cartItems}/>
+       
         </>
       }
       <PopUp visible={visible} />
