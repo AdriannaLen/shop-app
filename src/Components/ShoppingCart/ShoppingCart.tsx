@@ -1,5 +1,6 @@
 import { Product } from '../types';
 
+
 interface ShoppingCartProps {
     cartItems: Product[];
     handleDelete: (id: number) => void;

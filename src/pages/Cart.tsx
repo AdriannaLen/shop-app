@@ -20,8 +20,15 @@ export interface Product {
     title: string;
   }
 
+
 const Cart = () => {
   const [cartItems, setCartItems] = useState<Product[]>([]);
+
+  const handleDelete = (id: number) => {
+    const updatedCartItems = cartItems.filter(product => product.id !== id);
+    setCartItems(updatedCartItems);
+    localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
+  };
 
   useEffect(() => {
     const savedCartItems = localStorage.getItem('cartItems');
@@ -34,7 +41,7 @@ const Cart = () => {
     <>
       <Navigation />
       <Header>Shopping Cart</Header>
-      <ShoppingCart cartItems={cartItems} />
+      <ShoppingCart cartItems={cartItems} handleDelete={handleDelete} />
       <Footer />
     </>
   );

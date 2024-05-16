@@ -19,11 +19,11 @@ const ProductList: React.FC<ProductListProps> = () => {
   const [ cartItems, setCartItems ] = useState<Product[]>([]);
   const [ visible, setVisible ] = useState(false);
 
-  const handleDelete = (id: number) => {
-    const updatedCartItems = cartItems.filter(product => product.id !== id);
-    setCartItems(updatedCartItems);
-    localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
-  };
+  // const handleDelete = (id: number) => {
+  //   const updatedCartItems = cartItems.filter(product => product.id !== id);
+  //   setCartItems(updatedCartItems);
+  //   localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
+  // };
 
   const fetchProducts = async () => {
     try {
@@ -84,7 +84,7 @@ const ProductList: React.FC<ProductListProps> = () => {
               </li>
             ))}
           </ul>
-          <ShoppingCart cartItems={cartItems} handleDelete={handleDelete} />
+          <ShoppingCart cartItems={cartItems}/>
         </>
       }
       <PopUp visible={visible} />
