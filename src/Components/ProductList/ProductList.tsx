@@ -5,10 +5,12 @@ import PopUp from '../PopUp/PopUp';
 import { useState, useEffect } from "react";
 import { Product } from '../types';
 import './ProductList.scss';
+import ShoppingCart from '../ShoppingCart/ShoppingCart';
 
 interface ProductListProps {
   products: Product[];
   addToCart: (product: Product) => void;
+  handleDelete: (id: number) => void;
 }
 
 const ProductList: React.FC<ProductListProps> = () => {
@@ -16,6 +18,12 @@ const ProductList: React.FC<ProductListProps> = () => {
   const [ isLoading, setIsLoading ] = useState(false);
   const [ cartItems, setCartItems ] = useState<Product[]>([]);
   const [ visible, setVisible ] = useState(false);
+
+  const handleDelete = (id: number) => {
+    const updatedCartItems = cartItems.filter(product => product.id !== id);
+    setCartItems(updatedCartItems);
+    localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
+  };
 
   const fetchProducts = async () => {
     try {
@@ -67,17 +75,21 @@ const ProductList: React.FC<ProductListProps> = () => {
   return (
    
     <div className="container">
-      { isLoading ? <Loader /> :
-      <ul className='product-list-container'>
-        {products.map((product) => (
-          <li className='product-list-item' key={product.id}>
-            <ProductCard key={product.id} product={product} addToCart={addToCart} />
-          </li>
-        ))}
-      </ul> }
+      {isLoading ? <Loader /> :
+        <>
+          <ul className='product-list-container'>
+            {products.map((product) => (
+              <li className='product-list-item' key={product.id}>
+                <ProductCard key={product.id} product={product} addToCart={addToCart} />
+              </li>
+            ))}
+          </ul>
+          <ShoppingCart cartItems={cartItems} handleDelete={handleDelete} />
+        </>
+      }
       <PopUp visible={visible} />
-      </div>
-    
+    </div>
+      
   );
 };
 
