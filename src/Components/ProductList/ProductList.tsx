@@ -42,14 +42,14 @@ const ProductList: React.FC<ProductListProps> = () => {
     }
   };
 
-  useEffect(() => {
-    fetchProducts();
-  }, []);
+  // useEffect(() => {
+  //   fetchProducts();
+  // }, []);
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    setTimeout(() => setIsLoading(false), 3000); // for the Loader component
-  })
+  //   setTimeout(() => setIsLoading(false), 3000); // for the Loader component
+  // })
 
   useEffect(() => {
     fetchProducts();
