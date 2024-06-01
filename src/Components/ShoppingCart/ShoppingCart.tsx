@@ -48,7 +48,9 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ cartItems, handleDelete }) 
         ))}
       </ul>
       <h1 className="total">Total: ${calculateTotal()}</h1>
+   
     </div>
+    
   );
 };
 

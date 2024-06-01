@@ -3,7 +3,13 @@ import heartIcon from '../../assets/heart_icon.png';
 import logoIcon from '../../assets/shop-logo.svg';
 import './Navigation.scss';
 
-const Navigation = () => {
+type Props = {
+
+  counts: number[];
+}
+const Navigation = ({counts}: Props) => {
+
+
   return (
     <nav className="navigation">
       <ul className="navigation__list">
@@ -20,7 +26,7 @@ const Navigation = () => {
         <li className="navigation__item">
           <a href="/cart">
           <img src={shoppingCartIcon} alt="shopping cart" />
-        <span className="cart-count">0</span>
+         <span className="cart-count">{counts}</span>
         </a>
         </li>
         <li className="navigation__item"><a href="/favorites"><img src={heartIcon} alt="favorites" /></a></li>
