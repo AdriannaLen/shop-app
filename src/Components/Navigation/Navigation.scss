@@ -33,6 +33,19 @@
       list-style: none;
       position: relative;
 
+
+      .cart-count {
+        position: absolute;
+        top: -1px;
+        right: -8px;
+        background-color: red;
+        color: white;
+        border-radius: 50%;
+        padding: 5px;
+        font-size: 6px;
+        font-weight: bold;
+      }
+
       .sub__menu {
         display: none;
         position: absolute;

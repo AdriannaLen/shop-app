@@ -17,7 +17,12 @@ const Navigation = () => {
             <li><a href="/shop/category2">All Products</a></li>
           </ul>
         </li>
-        <li className="navigation__item"><a href="/cart"><img src={shoppingCartIcon} alt="shopping cart" /></a></li>
+        <li className="navigation__item">
+          <a href="/cart">
+          <img src={shoppingCartIcon} alt="shopping cart" />
+        <span className="cart-count">0</span>
+        </a>
+        </li>
         <li className="navigation__item"><a href="/favorites"><img src={heartIcon} alt="favorites" /></a></li>
       </ul>
     </nav>

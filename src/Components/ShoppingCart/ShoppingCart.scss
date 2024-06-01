@@ -1,7 +1,7 @@
 
 .buttonList {
   display: flex;
-  align-items: center;
+  // align-items: center;
   padding: 10px 15px;
   margin-bottom: 10px;
   background-color: #fff;
@@ -10,10 +10,12 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
   .buttonCounter {
-    margin-right: auto; // Przesuwa ten element całkowicie na lewo
+     // Przesuwa ten element całkowicie na lewo
+     
   }
 
   .buttonList__delete {
+  
     padding: 8px 16px;
     background-color: #ff4d4d;
     border: none;
