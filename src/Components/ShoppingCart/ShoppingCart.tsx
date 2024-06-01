@@ -31,7 +31,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ cartItems, handleDelete }) 
   const calculateTotal = () => {
     return cartItems.reduce((total, item, index) => {
       return total + item.price * counts[index];
-    }, 0);
+    }, 0); // 0 to wartosc poczatkowa
   };
 
   return (
