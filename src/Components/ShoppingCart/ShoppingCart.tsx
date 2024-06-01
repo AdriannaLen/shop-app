@@ -27,6 +27,13 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ cartItems, handleDelete }) 
     setCounts(newCounts);
   };
 
+
+  const calculateTotal = () => {
+    return cartItems.reduce((total, item, index) => {
+      return total + item.price * counts[index];
+    }, 0);
+  };
+
   return (
     <div className="container">
       <ul>
@@ -40,6 +47,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ cartItems, handleDelete }) 
           </li>
         ))}
       </ul>
+      <h1>Total: ${calculateTotal()}</h1>
     </div>
   );
 };
