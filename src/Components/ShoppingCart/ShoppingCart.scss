@@ -1,9 +1,7 @@
 
 .buttonList {
-
-    display: flex;
-justify-content: space-between;
-  align-items: center;
+  display: flex;
+  // align-items: center;
   padding: 10px 15px;
   margin-bottom: 10px;
   background-color: #fff;
@@ -11,8 +9,10 @@ justify-content: space-between;
   border-radius: 5px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
-.buttonList__delete {
+ 
 
+  .buttonList__delete {
+  
     padding: 8px 16px;
     background-color: #ff4d4d;
     border: none;
@@ -23,9 +23,22 @@ justify-content: space-between;
     transition: background-color 0.3s ease, transform 0.3s ease;
 
     &:hover {
-        background-color: #f71313;
-        transform: scale(1.05);
-      }
-}
+      background-color: #f71313;
+      transform: scale(1.05);
+    }
+  }
 
 }
+
+.total {
+
+  margin: 30px 0;
+  text-align:end;
+  font-size: 20px;
+  color:  black;
+}
+
+
+
+
+
