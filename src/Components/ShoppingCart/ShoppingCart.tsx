@@ -40,14 +40,14 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ cartItems, handleDelete }) 
         {cartItems.map((item, index) => (
           <li className="buttonList" key={item.id}>
             {item.title} - ${item.price}
-            <button onClick={() => handleDecrement(index)}>-</button>
-            <p>{counts[index]}</p>
-            <button onClick={() => handleIncrement(index)}>+</button>
+            <button className="buttonCounter" onClick={() => handleDecrement(index)}>-</button>
+            <p className="buttonCounter">{counts[index]}</p>
+            <button className="buttonCounter" onClick={() => handleIncrement(index)}>+</button>
             <button className="buttonList__delete" onClick={() => handleDelete(item.id)}>Delete</button>
           </li>
         ))}
       </ul>
-      <h1>Total: ${calculateTotal()}</h1>
+      <h1 className="total">Total: ${calculateTotal()}</h1>
     </div>
   );
 };
