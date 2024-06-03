@@ -5,7 +5,7 @@ import PopUp from '../PopUp/PopUp';
 import { useState, useEffect } from "react";
 import { Product } from '../types';
 import './ProductList.scss';
-import ShoppingCart from '../ShoppingCart/ShoppingCart';
+
 
 interface ProductListProps {
   products: Product[];

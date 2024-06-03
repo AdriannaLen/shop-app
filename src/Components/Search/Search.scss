@@ -39,8 +39,9 @@
     outline: none;
     transition: background-color 0.3s;
 
-    .search-button:hover {
-        background-color: #0056b3;
+    &:hover {
+        background-color: orange;
+        background-color: orange;
       }
   }
   
