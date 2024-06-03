@@ -1,7 +1,10 @@
 import './Search.scss'
 import  { useState } from 'react';
 
+const searchProps = {
 
+
+}
 function SearchBar() {
   const [searchTerm, setSearchTerm] = useState('');
 
