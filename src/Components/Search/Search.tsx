@@ -64,7 +64,7 @@ function SearchBar() {
             ))}
           </ul>
         )}
-        {results.length === 0 && !isLoading && <p>No results found</p>}
+       
       </div>
     </div>
   );
