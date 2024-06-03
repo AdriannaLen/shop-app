@@ -39,10 +39,11 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ cartItems, handleDelete }) 
       <ul>
         {cartItems.map((item, index) => (
           <li className="buttonList" key={item.id}>
-            {item.title} - ${item.price}
-            <button className="buttonCounter" onClick={() => handleDecrement(index)}>-</button>
-            <p className="buttonCounter">{counts[index]}</p>
-            <button className="buttonCounter" onClick={() => handleIncrement(index)}>+</button>
+            <p className="price">{item.title} - ${item.price}</p>
+            <button className="buttonList-buttonCounter" onClick={() => handleDecrement(index)}>-</button>
+            <p className="buttonList-counts">{counts[index]}</p>
+            <button className="buttonList-buttonCounter" onClick={() => handleIncrement(index)}>+</button>
+           
             <button className="buttonList__delete" onClick={() => handleDelete(item.id)}>Delete</button>
           </li>
         ))}
