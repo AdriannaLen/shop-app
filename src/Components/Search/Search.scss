@@ -1,4 +1,6 @@
 /* Container to center the search form */
+
+
 .search-container {
     display: flex;
     justify-content: center;
@@ -43,9 +45,15 @@
         background-color: orange;
         background-color: orange;
       }
-  }
+  
   
 
 }
 
+}
+
+.search-results {
+
+    flex-direction: column;
+}
 }
