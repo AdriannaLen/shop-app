@@ -26,19 +26,23 @@ function SearchBar() {
     fetchProducts();
   }, []);
 
-  const handleSearch = (e) => {
-    e.preventDefault();
+  useEffect(() => {
+    if (searchTerm) {
+      setIsLoading(true);
     const filteredResults = products.filter(product => 
       product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       product.description.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setResults(filteredResults);
-  };
+    setIsLoading(false);
+  } else {
+    setResults([]);
+  } }, [searchTerm, products]);
 
   return (
   
     <div className="search-container">
-      <form onSubmit={handleSearch} className="search-form">
+      
         <input
           type="text"
           className="search-input"
@@ -50,7 +54,7 @@ function SearchBar() {
         <button type="submit" className="search-button">
           Search
         </button>
-      </form>
+   
       <div className="search-results">
         {isLoading && <p>Loading...</p>}
         {results.length > 0 && (
